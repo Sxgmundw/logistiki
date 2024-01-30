@@ -8,13 +8,47 @@
 </head>
 <body>
     <form id="trialBalanceForm">
-        <!-- Input fields for trial balance -->
-        <label for="asset">Asset:</label>
-        <input type="number" id="asset" name="asset" required>
+        <!-- Non-Current Assets -->
+        <h2>Non-Current Assets</h2>
+        <label for="machinery">Machinery:</label>
+        <input type="number" id="machinery" name="machinery">
 
-        <label for="liability">Liability:</label>
-        <input type="number" id="liability" name="liability" required>
+        <label for="furniture">Furniture:</label>
+        <input type="number" id="furniture" name="furniture">
 
+        <!-- Current Assets -->
+        <h2>Current Assets</h2>
+        <label for="inventory">Inventory (Opening Inventory):</label>
+        <input type="number" id="inventory" name="inventory">
+
+        <label for="tradeReceivables">Trade Receivables:</label>
+        <input type="number" id="tradeReceivables" name="tradeReceivables">
+
+        <label for="cash">Cash / Cash in Hand:</label>
+        <input type="number" id="cash" name="cash">
+
+        <!-- Liabilities -->
+        <h2>Liabilities</h2>
+        <label for="bankOverdraft">Bank Overdraft:</label>
+        <input type="number" id="bankOverdraft" name="bankOverdraft">
+
+        <label for="tradePayables">Trade Payables:</label>
+        <input type="number" id="tradePayables" name="tradePayables">
+
+        <!-- Expenses -->
+        <h2>Expenses</h2>
+        <label for="rent">Rent:</label>
+        <input type="number" id="rent" name="rent">
+
+        <label for="salaries">Salaries & Wages:</label>
+        <input type="number" id="salaries" name="salaries">
+
+        <!-- Other Income -->
+        <h2>Other Income</h2>
+        <label for="commissionIncome">Commission Received / Commision Income:</label>
+        <input type="number" id="commissionIncome" name="commissionIncome">
+
+        <!-- Calculate Button -->
         <button type="button" onclick="calculateStatement()">Calculate</button>
     </form>
 
