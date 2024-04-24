@@ -49,14 +49,23 @@ input[type="number"]:focus {
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 
 #trialBalanceForm > * {
-  margin-bottom: 20px;
+  grid-column: span 2;
 }
 
-h2 + label {
-  margin-top: 0;
+#trialBalanceForm h2 {
+  grid-column: span 2;
+}
+
+#trialBalanceForm hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
 }
 
 /* Section Separators */
@@ -64,65 +73,47 @@ h2 + label {
 h2 + hr {
   margin-top: 10px;
   margin-bottom: 20px;
-  border: none;
-  border-top: 1px solid #ccc;
+}
+
+/* Boxes */
+
+#trialBalanceForm .box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  grid-column: span 2;
+}
+
+/* Sections */
+
+#trialBalanceForm .section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#trialBalanceForm .section:nth-child(even) {
+  margin-left: 20px;
+}
+
+#trialBalanceForm .section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #337ab7;
 }
 
 /* Responsive Design */
 
 @media (max-width: 600px) {
   #trialBalanceForm {
-    padding: 10px;
+    grid-template-columns: 1fr;
   }
-  input[type="number"] {
-    width: 100%;
-    height: 30px;
-    padding: 5px;
+
+  #trialBalanceForm .box,
+  #trialBalanceForm .section {
+    grid-column: span 1;
   }
-}
-
-/* Box in the Middle */
-
-.box {
-  width: 100%;
-  height: 200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Section Layout */
-
-.section {
-  width: 48%;
-  float: left;
-  margin-right: 2%;
-  margin-bottom: 20px;
-}
-
-.section:nth-child(2n) {
-  margin-right: 0;
-}
-
-.section h2 {
-  margin-bottom: 10px;
-}
-
-.section label {
-  display: inline-block;
-  width: 48%;
-  margin-right: 2%;
-  margin-bottom: 10px;
-}
-
-.section input[type="number"] {
-  width: 48%;
-  margin-right: 2%;
-}
-
-.section input[type="number"]:nth-child(2n) {
-  margin-right: 0;
 }
